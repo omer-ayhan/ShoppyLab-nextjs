@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Sidebar() {
 	return (
-		<div className="absolute min-h-screen flex flex-row bg-gray-100 z-0 overflow-hidden">
+		<div className="flex-none min-h-screen flex flex-row bg-gray-100 z-0 overflow-hidden">
 			<div className="flex flex-col w-56 bg-white overflow-hidden">
 				<ul className="flex flex-col py-4">
 					<li>

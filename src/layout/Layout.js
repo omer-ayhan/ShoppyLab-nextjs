@@ -7,8 +7,10 @@ export default function Layout({ children }) {
 	return (
 		<>
 			<Navbar />
-			<Sidebar />
-			<main className="overflow-x-hidden">{children}</main>
+			<div className="flex">
+				<Sidebar />
+				<main className="overflow-x-hidden flex-1">{children}</main>
+			</div>
 		</>
 	);
 }
