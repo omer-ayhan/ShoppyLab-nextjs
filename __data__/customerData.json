@@ -1,0 +1,40 @@
+{
+	"customer_data": [
+		{
+			"order_id": "#001",
+			"order_date": "2019-01-01",
+			"order_status": 0,
+			"customer_name": "Onur Lorem",
+			"payment_method": "credit card",
+			"country": "Turkey",
+			"total": "₺ 10124"
+		},
+		{
+			"order_id": "#002",
+			"order_date": "2019-01-01",
+			"order_status": 1,
+			"customer_name": "Onur Lorem",
+			"payment_method": "credit card",
+			"country": "Turkey",
+			"total": "₺ 10124"
+		},
+		{
+			"order_id": "#003",
+			"order_date": "2019-01-01",
+			"order_status": 0,
+			"customer_name": "Onur Lorem",
+			"payment_method": "credit card",
+			"country": "Turkey",
+			"total": "₺ 10124"
+		},
+		{
+			"order_id": "#004",
+			"order_date": "2019-01-01",
+			"order_status": 1,
+			"customer_name": "Onur Lorem",
+			"payment_method": "credit card",
+			"country": "Turkey",
+			"total": "₺ 10124"
+		}
+	]
+}

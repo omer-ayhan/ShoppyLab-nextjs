@@ -29,9 +29,6 @@ export default function Layout({ children }) {
 						},
 					}}
 					transition={{
-						type: "spring",
-						stiffness: 300,
-						damping: 200,
 						duration: 0.5,
 					}}
 					className="overflow-x-hidden flex-1">
