@@ -2,7 +2,7 @@ import React from "react";
 
 export default function TabsHeader({ tabData, activeTab, onClick }) {
 	return (
-		<div class="flex border-b px-5">
+		<div class=" border-b px-5 hidden sm:flex">
 			{tabData.map(({ title, icon, id }, i) => (
 				<button
 					key={`${id}-${i}`}

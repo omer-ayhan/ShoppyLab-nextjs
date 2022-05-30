@@ -22,7 +22,7 @@ export default function Home() {
 	console.log(activeTab);
 	return (
 		<Page>
-			<div className="flex flex-col w-1/2 gap-4">
+			<div className="flex flex-col md:w-1/2 gap-4">
 				<h1 className="text-3xl font-bold">Müşteriler</h1>
 				<p className="text-gray-600">
 					Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -34,7 +34,7 @@ export default function Home() {
 				</p>
 			</div>
 			<div class="py-10">
-				<div class="sm:hidden relative w-11/12 mx-auto bg-transparent rounded">
+				<div class="sm:hidden relative  mx-auto bg-transparent rounded">
 					<div class="absolute inset-0 m-auto mr-4 z-0 w-6 h-6 rotate-90">
 						<i className="ri-code-fill" />
 					</div>
@@ -42,13 +42,13 @@ export default function Home() {
 						aria-label="Selected tab"
 						class="form-select block w-full p-3 border border-gray-300 rounded text-gray-600 appearance-none bg-transparent relative z-10">
 						{tabData.map(({ title }) => (
-							<option selected class="text-sm text-gray-600">
+							<option selected class="absolute top-0 text-lg text-gray-600">
 								{title}
 							</option>
 						))}
 					</select>
 				</div>
-				<div class="xl:w-full xl:mx-0 h-12 hidden sm:block rounded">
+				<div class="xl:w-full xl:mx-0 h-12  rounded">
 					<TabsHeader
 						tabData={tabData}
 						onClick={setActiveTab}
@@ -59,8 +59,8 @@ export default function Home() {
 						className="py-5"
 						activeTabName={activeTab}
 						tabName="customer">
-						<div className="flex sm:flex-col 2xl:flex-row 2xl:justify-between w-full bg-white p-3 gap-3 border border-gray-200 rounded-sm">
-							<span className="h-10 w-1/2 2xl:w-1/3 bg-white cursor-pointer border border-gray-300 text-sm rounded-sm flex">
+						<div className="flex flex-col 2xl:flex-row 2xl:justify-between w-full bg-white p-3 gap-3 border border-gray-200 rounded-sm">
+							<span className="h-10 w-full md:w-1/2 2xl:w-1/3 bg-white cursor-pointer border border-gray-300 text-sm rounded-sm flex">
 								<div className="flex items-center content-center">
 									<i className="ri-search-line m-3 mb-4 text-lg text-gray-70"></i>
 								</div>
@@ -71,9 +71,9 @@ export default function Home() {
 									className="flex-grow pl-0 px-4 text-sm focus:outline-none bg-wgite"
 								/>
 							</span>
-							<div className="flex items-center content-start gap-4">
+							<div className="flex flex-col md:w-10/12 md:flex-row items-center content-start gap-4">
 								<p className="text-sm">seçilenleri</p>
-								<div class="relative bg-transparent rounded-sm w-52">
+								<div class="relative bg-transparent rounded-sm w-full md:w-64">
 									<div class="absolute inset-0 m-auto mr-4 z-0 w-6 h-6">
 										<i className="ri-arrow-down-s-line" />
 									</div>
@@ -87,15 +87,15 @@ export default function Home() {
 										))}
 									</select>
 								</div>
-								<button className="flex items-center h-10 px-4 border text-sm border-gray-200 rounded-sm text-gray-900 bg-transparent relative z-10 hover:bg-slate-900 hover:text-white transition-colors duration-300 ease-in-out">
+								<button className="flex items-center justify-center w-full md:w-1/3 h-10 px-4 border text-sm border-gray-200 rounded-sm text-gray-900 bg-transparent relative z-10 hover:bg-slate-900 hover:text-white transition-colors duration-300 ease-in-out">
 									<i className="ri-add-fill"></i>
 									Müşteri Ekle
 								</button>
-								<button className="flex items-center h-10 px-4 border text-sm border-gray-200 rounded-sm text-gray-900 bg-transparent relative z-10 hover:bg-slate-900 hover:text-white transition-colors duration-300 ease-in-out">
+								<button className="flex items-center justify-center w-full md:w-1/3 h-10 px-4 border text-sm border-gray-200 rounded-sm text-gray-900 bg-transparent relative z-10 hover:bg-slate-900 hover:text-white transition-colors duration-300 ease-in-out">
 									<i className="ri-file-chart-fill mr-1"></i>
 									Dışa Aktar
 								</button>
-								<button className="flex items-center h-10 px-4 border text-sm border-gray-200 rounded-sm text-gray-900 bg-transparent relative z-10 hover:bg-slate-900 hover:text-white transition-colors duration-300 ease-in-out">
+								<button className="flex items-center justify-center w-full md:w-1/3 h-10 px-4 border text-sm border-gray-200 rounded-sm text-gray-900 bg-transparent relative z-10 hover:bg-slate-900 hover:text-white transition-colors duration-300 ease-in-out">
 									<i className="ri-file-chart-fill mr-1"></i>
 									İçe Aktar
 								</button>

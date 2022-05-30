@@ -17,11 +17,14 @@ const sideMenuData = [
 	},
 ];
 
-export default function Sidebar() {
+export default function Sidebar({ open = false }) {
 	const router = useRouter();
 
 	return (
-		<div className="flex-none min-h-screen flex flex-row bg-gray-100 z-0 overflow-hidden">
+		<div
+			className={` flex-none min-h-screen ${
+				open ? "absolute flex" : "hidden"
+			} md:flex flex-row bg-gray-100 z-30 md:z-0 overflow-hidden`}>
 			<div className="flex flex-col w-56 bg-white overflow-hidden">
 				<ul className="flex flex-col py-4">
 					{sideMenuData.map(({ route, matchRoute, title, icon }, i) => (
