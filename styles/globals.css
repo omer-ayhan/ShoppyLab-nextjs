@@ -27,6 +27,14 @@ a {
 	background-position: 100%;
 }
 
+.bg_slider.active:before {
+	background-position: 100%;
+}
+
+.bg_slider.active > span {
+	color: #fff !important;
+}
+
 .bg_slider:before {
 	position: absolute;
 	top: 0;
@@ -53,4 +61,8 @@ a {
 	color: var(--slideTextColor);
 	cursor: pointer;
 	background-position: -50% 100%;
+}
+
+.h-screen {
+	height: 100vh !important;
 }

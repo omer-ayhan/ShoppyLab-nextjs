@@ -1,16 +1,21 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function Navbar() {
 	return (
 		<div className="relative w-screen flex flex-row items-center justify-between bg-white drop-shadow-md z-50 overflow-hidden py-1">
 			<div className="transition-all ease-in duration-200 hover:bg-gray-200 p-2 cursor-pointer rounded-md ml-8 text-lg text-gray-700 hidden md:flex">
-				<Image
-					src={require("public/favicon.png")}
-					width={40}
-					height={40}
-					className="rounded-full"
-				/>
+				<Link href="/">
+					<>
+						<Image
+							src={require("public/favicon.png")}
+							width={40}
+							height={40}
+							className="rounded-full"
+						/>
+					</>
+				</Link>
 			</div>
 			<span className="flex flex-grow max-w-md items-center content-center">
 				<span className="flex-1 w-screen md:w-1/3 lg:w-1/4 h-10 bg-gray-200 cursor-pointer border border-gray-300 text-sm rounded-sm flex">
