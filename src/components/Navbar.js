@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Navbar() {
 	return (
-		<div className="w-screen flex flex-row items-center p-1 justify-between bg-white drop-shadow-md z-50">
+		<div className="w-screen flex flex-row items-center p-1 justify-between bg-white drop-shadow-md z-50 overflow-hidden">
 			<div className="transition-all ease-in duration-200 hover:bg-gray-200 p-2 cursor-pointer rounded-md ml-8 text-lg text-gray-700 hidden md:flex">
 				<Image
 					src={require("public/favicon.png")}
@@ -18,33 +18,34 @@ export default function Navbar() {
 						type="search"
 						name="serch"
 						placeholder="Search"
-						className="flex-grow px-4 text-sm focus:outline-none"
+						className="flex-grow px-4 text-sm focus:outline-none bg-gray-200"
 					/>
-					<i className="fas fa-search m-3 mr-5 text-lg text-gray-700 w-4 h-4"></i>
+					<div className="flex items-center content-center">
+						<i className="ri-search-line m-3 mb-4 text-lg text-gray-70"></i>
+					</div>
 				</span>
-				<a className="flex-0 bg-neutral-800 hover:bg-neutral-700 text-white text-center px-3 py-2 m-3 transition-all ease-in duration-200 rounded-md flex items-center content-center cursor-pointer">
-					Planı Yükselt ^
+				<a className="flex-0 bg-slate-800 hover:bg-slate-700 text-sm text-white text-center px-3 py-2 m-3 transition-all ease-in duration-200 rounded-md flex items-center content-center cursor-pointer">
+					Planı Yükselt <i className="ri-arrow-up-s-line ml-1"></i>
 				</a>
 			</span>
 			<div className="flex flex-row-reverse mr-4 ml-4 md:hidden">
 				<i className="fas fa-bars"></i>
 			</div>
 			<div className="flex flex-row mr-8 md:flex">
-				<div className="flex flex-col items-center place-content-center transition-all ease-in duration-200 hover:bg-gray-200 cursor-pointer rounded-md m-2 relative p-2 text-center">
-					<i className="fas fa-bell m-2 text-lg text-gray-700"></i>
-					Avatar
-					<div className="opacity-0 w-28 bg-black text-white text-center text-xs rounded-lg my-1 py-2 absolute z-10 group-hover:opacity-100 top-full -left-1/2 ml-14 px-3 pointer-events-none">
-						Tooltip center
+				<div className="relative sm:max-w-xl sm:mx-auto  transition-all ease-in duration-200 hover:bg-gray-200 cursor-pointer rounded-md m-2  p-2 text-center">
+					<div className="flex flex-col items-center place-content-center group cursor-pointer relative text-center">
+						<i className="fas fa-bell m-2 text-lg text-gray-700"></i>
+						Avatar
 					</div>
 				</div>
-				<a className="bg-neutral-800 hover:bg-neutral-700 text-white text-center px-3 py-2 m-3 mx-2  transition-all ease-in duration-200 rounded-md flex items-center content-center cursor-pointer">
-					Link
+				<a className="bg-slate-800 hover:bg-slate-700 text-white text-center px-3 py-2 m-3 mx-2 h-10 transition-all ease-in duration-200 rounded-md flex items-center content-center cursor-pointer">
+					<i className="ri-notification-2-line"></i>
 				</a>
-				<a className="bg-neutral-800 hover:bg-neutral-700 text-white text-center px-3 py-2 m-3 mx-2 transition-all ease-in duration-200 rounded-md flex items-center content-center cursor-pointer">
-					Link
+				<a className="bg-slate-800 hover:bg-slate-700 text-white text-center px-3 py-2 m-3 mx-2 h-10 transition-all ease-in duration-200 rounded-md flex items-center content-center cursor-pointer">
+					<i className="ri-settings-2-line"></i>
 				</a>
-				<a className="bg-neutral-800 hover:bg-neutral-700 text-white text-center px-3 py-2 m-3 mx-2  transition-all ease-in duration-200 rounded-md flex items-center content-center cursor-pointer">
-					Link
+				<a className="bg-slate-800 hover:bg-slate-700 text-white text-center px-3 py-2 m-3 mx-2 h-10  transition-all ease-in duration-200 rounded-md flex items-center content-center cursor-pointer">
+					<i className="ri-logout-box-r-line"></i>
 				</a>
 			</div>
 		</div>

@@ -8,7 +8,7 @@ export default function Layout({ children }) {
 		<>
 			<Navbar />
 			<Sidebar />
-			<main>{children}</main>
+			<main className="overflow-x-hidden">{children}</main>
 		</>
 	);
 }

@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+#__next {
+	overflow: hidden;
+}
+
 html,
 body {
 	padding: 0;
