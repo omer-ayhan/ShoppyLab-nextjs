@@ -19,7 +19,6 @@ const tabData = [
 export default function Home() {
 	const [activeTab, setActiveTab] = useState(tabData[0].id);
 
-	console.log(activeTab);
 	return (
 		<Page>
 			<div className="flex flex-col md:w-1/2 gap-4">
@@ -40,7 +39,7 @@ export default function Home() {
 					</div>
 					<select
 						aria-label="Selected tab"
-						class="form-select block w-full p-3 border border-gray-300 rounded text-gray-600 appearance-none bg-transparent relative z-10">
+						class="form-select block w-full p-3 border border-gray-300 rounded text-gray-600 appearance-none bg-transparent relative z-0">
 						{tabData.map(({ title }) => (
 							<option selected class="absolute top-0 text-lg text-gray-600">
 								{title}
@@ -79,7 +78,7 @@ export default function Home() {
 									</div>
 									<select
 										aria-label="Selected tab"
-										class="form-select block w-full h-10 px-4 border text-sm border-gray-200 rounded-sm text-gray-600 appearance-none bg-transparent relative z-10 outline-none">
+										class="form-select block w-full h-10 px-4 border text-sm border-gray-200 rounded-sm text-gray-600 appearance-none bg-transparent relative z-0 outline-none">
 										{tabData.map(({ title }) => (
 											<option selected class="text-sm text-gray-600">
 												{title}

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 #__next {
-	overflow: hidden;
+	overflow-x: hidden;
 }
 
 html,
