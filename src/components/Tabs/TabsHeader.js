@@ -5,7 +5,7 @@ export default function TabsHeader({ tabData, activeTab, onClick }) {
 		<div class="flex border-b px-5">
 			{tabData.map(({ title, icon, id }) => (
 				<button
-					onClick={(tabData) => onClick(tabData)}
+					onClick={() => onClick(id)}
 					class={`text-sm transition-all ease-in-out duration-200 border-blue-600 pt-3 rounded-t ${
 						id === activeTab ? "text-blue-600" : ""
 					} hover:text-blue-600 mr-12 cursor-pointer`}>

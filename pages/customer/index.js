@@ -1,3 +1,4 @@
+import TabsContent from "@components/Tabs/TabsContent";
 import TabsHeader from "@components/Tabs/TabsHeader";
 import Page from "@layout/Page";
 import { useState } from "react";
@@ -11,12 +12,14 @@ const tabData = [
 	{
 		title: "İptal Olanlar",
 		icon: "ri-close-line",
-		id: "canceled",
+		id: "cancelled",
 	},
 ];
 
 export default function Home() {
 	const [activeTab, setActiveTab] = useState(tabData[0].id);
+
+	console.log(activeTab);
 	return (
 		<Page>
 			<div className="flex flex-col w-1/2 gap-4">
@@ -38,41 +41,29 @@ export default function Home() {
 					<select
 						aria-label="Selected tab"
 						class="form-select block w-full p-3 border border-gray-300 rounded text-gray-600 appearance-none bg-transparent relative z-10">
-						<option class="text-sm text-gray-600">inactive</option>
-						<option class="text-sm text-gray-600">inactive</option>
-						<option selected class="text-sm text-gray-600">
-							Active
-						</option>
-						<option class="text-sm text-gray-600">inactive</option>
-						<option class="text-sm text-gray-600">inactive</option>
+						{tabData.map(({ title }) => (
+							<option selected class="text-sm text-gray-600">
+								{title}
+							</option>
+						))}
 					</select>
 				</div>
 				<div class="xl:w-full xl:mx-0 h-12 hidden sm:block rounded">
 					<TabsHeader
 						tabData={tabData}
-						onClick={({ id }) => setActiveTab(id)}
+						onClick={setActiveTab}
 						activeTab={activeTab}
 					/>
 
-					{/* <div class="flex border-b px-5">
-						{tabData.map(({ title, icon, id }) => (
-							<button
-								onClick={() => setActiveTab(id)}
-								class={`text-sm transition-all ease-in-out duration-200 border-blue-600 pt-3 rounded-t ${
-									id === activeTab ? "text-blue-600" : ""
-								} hover:text-blue-600 mr-12 cursor-pointer`}>
-								<div class="flex items-center content-center px-3 mb-3">
-									<i className={icon}></i>
-									<span class="ml-1 font-normal">{title}</span>
-								</div>
-								<div
-									class={`w-full transition-all ease-in-out duration-200 bg-blue-600 ${
-										id === activeTab ? "h-1" : "h-0"
-									}`}
-								/>
-							</button>
-						))}
-					</div> */}
+					<TabsContent
+						className="py-5"
+						activeTabName={activeTab}
+						tabName="customer">
+						<div className="w-full"></div>
+					</TabsContent>
+					<TabsContent activeTabName={activeTab} tabName="cancelled">
+						Test2
+					</TabsContent>
 				</div>
 			</div>
 		</Page>
