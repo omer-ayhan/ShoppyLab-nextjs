@@ -59,7 +59,48 @@ export default function Home() {
 						className="py-5"
 						activeTabName={activeTab}
 						tabName="customer">
-						<div className="w-full"></div>
+						<div className="flex sm:flex-col 2xl:flex-row 2xl:justify-between w-full bg-white p-3 gap-3 border border-gray-200 rounded-sm">
+							<span className="h-10 w-1/2 2xl:w-1/3 bg-white cursor-pointer border border-gray-300 text-sm rounded-sm flex">
+								<div className="flex items-center content-center">
+									<i className="ri-search-line m-3 mb-4 text-lg text-gray-70"></i>
+								</div>
+								<input
+									type="search"
+									name="serch"
+									placeholder="Search"
+									className="flex-grow pl-0 px-4 text-sm focus:outline-none bg-wgite"
+								/>
+							</span>
+							<div className="flex items-center content-start gap-4">
+								<p className="text-sm">seçilenleri</p>
+								<div class="relative bg-transparent rounded-sm w-52">
+									<div class="absolute inset-0 m-auto mr-4 z-0 w-6 h-6">
+										<i className="ri-arrow-down-s-line" />
+									</div>
+									<select
+										aria-label="Selected tab"
+										class="form-select block w-full h-10 px-4 border text-sm border-gray-200 rounded-sm text-gray-600 appearance-none bg-transparent relative z-10 outline-none">
+										{tabData.map(({ title }) => (
+											<option selected class="text-sm text-gray-600">
+												{title}
+											</option>
+										))}
+									</select>
+								</div>
+								<button className="flex items-center h-10 px-4 border text-sm border-gray-200 rounded-sm text-gray-900 bg-transparent relative z-10 hover:bg-slate-900 hover:text-white transition-colors duration-300 ease-in-out">
+									<i className="ri-add-fill"></i>
+									Müşteri Ekle
+								</button>
+								<button className="flex items-center h-10 px-4 border text-sm border-gray-200 rounded-sm text-gray-900 bg-transparent relative z-10 hover:bg-slate-900 hover:text-white transition-colors duration-300 ease-in-out">
+									<i className="ri-file-chart-fill mr-1"></i>
+									Dışa Aktar
+								</button>
+								<button className="flex items-center h-10 px-4 border text-sm border-gray-200 rounded-sm text-gray-900 bg-transparent relative z-10 hover:bg-slate-900 hover:text-white transition-colors duration-300 ease-in-out">
+									<i className="ri-file-chart-fill mr-1"></i>
+									İçe Aktar
+								</button>
+							</div>
+						</div>
 					</TabsContent>
 					<TabsContent activeTabName={activeTab} tabName="cancelled">
 						Test2

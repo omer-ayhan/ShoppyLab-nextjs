@@ -3,8 +3,9 @@ import React from "react";
 export default function TabsHeader({ tabData, activeTab, onClick }) {
 	return (
 		<div class="flex border-b px-5">
-			{tabData.map(({ title, icon, id }) => (
+			{tabData.map(({ title, icon, id }, i) => (
 				<button
+					key={`${id}-${i}`}
 					onClick={() => onClick(id)}
 					class={`text-sm transition-all ease-in-out duration-200 border-blue-600 pt-3 rounded-t ${
 						id === activeTab ? "text-blue-600" : ""
