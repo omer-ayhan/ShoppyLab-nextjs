@@ -30,7 +30,7 @@ export default function Sidebar({ onHide, open = false }) {
 				/>
 			)}
 			<div
-				className={`transition-all duration-200 ease-in-out flex-none min-h-screen ${
+				className={`md:relative md:left-0 transition-all duration-200 ease-in-out flex-none min-h-screen ${
 					open ? "absolute flex left-0" : "absolute -left-80"
 				} md:flex flex-row bg-gray-100 z-30 md:z-0 overflow-hidden`}>
 				<div className="flex flex-col w-56 bg-white overflow-hidden">
