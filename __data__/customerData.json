@@ -5,7 +5,7 @@
 			"order_date": "2019-01-01",
 			"order_status": 0,
 			"customer_name": "Onur Lorem",
-			"payment_method": "credit card",
+			"payment_method": "Kredi Kartı",
 			"country": "Turkey",
 			"total": "₺ 10124"
 		},
@@ -14,7 +14,7 @@
 			"order_date": "2019-01-01",
 			"order_status": 1,
 			"customer_name": "Onur Lorem",
-			"payment_method": "credit card",
+			"payment_method": "Kredi Kartı",
 			"country": "Turkey",
 			"total": "₺ 10124"
 		},
@@ -23,7 +23,7 @@
 			"order_date": "2019-01-01",
 			"order_status": 0,
 			"customer_name": "Onur Lorem",
-			"payment_method": "credit card",
+			"payment_method": "Kredi Kartı",
 			"country": "Turkey",
 			"total": "₺ 10124"
 		},
@@ -32,7 +32,7 @@
 			"order_date": "2019-01-01",
 			"order_status": 1,
 			"customer_name": "Onur Lorem",
-			"payment_method": "credit card",
+			"payment_method": "Kredi Kartı",
 			"country": "Turkey",
 			"total": "₺ 10124"
 		}
